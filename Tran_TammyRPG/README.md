@@ -65,8 +65,6 @@ When I was testing my program it kept crashing and showing a SIGSEG error. I rea
 ## **7. Sample Output & Walkthrough**
 (Provide an example of how the game runs, including player input.)
 
-/Users/tammytran/programming-assignment-2-ttran3300/cmake-build-debug/CS210PA2
-
 CONGRATULATIONS! You won the lottery and take home 5 million dollars. Do you:
 1. You share your wealth with your friends/family. (Go left)
 2. You spend the money on yourself. (Go right)
@@ -116,9 +114,6 @@ Process finished with exit code 0
 
 ## **9. Edge Cases & Testing**
 An edge case that I tested was when the player inputs an invalid input such as a letter or number other than 1 or 2, the game will prompt the user again until a valid input is provided.
-
-Example:
-> I tested a scenario where the player reaches a dead-end (leaf node) and ensured the program correctly ends the game.
 
 ---
 
