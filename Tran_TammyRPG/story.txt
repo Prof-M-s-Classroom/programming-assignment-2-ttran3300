@@ -1,0 +1,17 @@
+1 | CONGRATULATIONS! You won the lottery and take home 5 million dollars. | 2 | 3
+2 | You share your wealth with your friends/family. | 4 | 5
+3 | You spend the money on yourself. | 6 | 7
+4 | You quickly book a flight for you and your best friends to travel to Costa Rica for 2 weeks. | 8 | 9
+5 | You pay off all your family debts and settle down. | -1 | -1
+6 | You book a solo vacation. | 8 | 9
+7 | You buy a brand luxury new car. | 10 | 11
+8 | You spend your last day at an all-inclusive resort. | 12 | 13
+9 | You spend your last day venturing out of the hotel to explore. | 14 | 15
+10| You buy a Porsche. | 17 | -1
+11| You buy a Ferrari. | 17 | -1
+12| You go jetskiing and parasailing. | 16 | -1
+13| You have a relaxing day at the spa. | 16 | -1
+14| You go hiking to a beautiful waterfall. | 16 | -1
+15| You try new foods in the local town and enjoy the beach. | 16 | -1
+16| Your trip has sadly come to an end and you have a safe flight home. | -1 | -1
+17| You are happy about your purchase and settle down. | -1 | -1
