@@ -2,22 +2,17 @@
 # CS210 Data Structures SP25
 ## Programming Assignment 2: Text-Based RPG Using Decision Trees
 
-### **Student Name:** `[Tammy Tran]`  
-### **Student ID:** `[828404870]`  
+### **Student Name:** `Tammy Tran`  
+### **Student ID:** `828404870`  
 
 ---
 
 ## **1. Project Overview**
-(Provide a brief summary of your RPG game. Describe how it uses a decision tree and how the player interacts with it.)
-This project is a text-based RPG that uses a binary decision tree. At each event in the game, it is a node with two possible choices, left or right. The player progresses through the game by selecting one of the two options shown at each stage. The decision tree is built based off from reading data from the story.txt file that includes event descriptions and the left and right events. Finally, the game officially ends when it reaches a leaf node (nullptr/-1 left and -1 right) with no other choices
-
-Example:
-> This project implements a text-based RPG using a **binary decision tree**. Each game event is represented as a node, and the player progresses by choosing between two paths at each stage. The storyline is loaded from an external text file (`story.txt`), which is parsed to construct the decision tree. The game ends when a leaf node (with `-1` as left and right children) is reached.
+This project is a text-based RPG that uses a binary decision tree. At each event in the game, it is a node with two possible choices, left or right. The player progresses through the game by selecting one of the two options shown at each stage. The decision tree is built based off from reading data from the story.txt file that includes event descriptions and the left and right events. Finally, the game officially ends when it reaches a leaf node (nullptr/-1 left and -1 right) with no other choices.
 
 ---
 
 ## **2. Folder & File Structure**
-(Explain the role of each file in your project.)
 
 - **`main.cpp`** → `[This is the main function file where you start the game execution. The file also has logic that helps read and load the story data from the file.]`  
 - **`GameDecisionTree.h`** → `[This file contains the declartion of the GameDecisionTree class which is used to manage the decision tree. In this class, I included a method to load the story from the txt file, created the binary decision tree and transversed through the tree based on the players choice.]`  
@@ -28,7 +23,6 @@ Example:
 ---
 
 ## **3. Decision Tree Construction**
-(Explain how the decision tree is built from the `story.txt` file.)
 The decision tree is built by reading the lines from the story.txt file, which is organized like a binary tree structure. Like a binary tree, each event has a description and is connected to two possible outcomes (left or right). As the file reads the story.txt file, nodes are created for each event and create a tree. Eventually, based on the players choices, a pathway is created when progressing through the story and reaching the end.
 
 - How are `Story` objects created from the text file?  
@@ -40,7 +34,6 @@ The decision tree is built by reading the lines from the story.txt file, which i
 ---
 
 ## **4. Game Traversal**
-(Describe how the game moves through the decision tree.)
 The game moves through the decision tree by starting at the root and moving to the left or right child node based on what the player chooses. The story repeats and continues until a leaf node is reached which will cause the story to end.
 
 - How does user input determine the path taken?  
@@ -53,7 +46,6 @@ The game moves through the decision tree by starting at the root and moving to t
 ---
 
 ## **5. File Parsing & Data Loading**
-(Explain the process of reading `story.txt` and constructing the decision tree.)
 The story.txt is read by using an ifstream object that reads each line and divides it to event number, description, left event number and right event number. Nodes are also created and stored into the storyMap and then assigned to the left and right pointers.
 
 - How is the file read and parsed using a delimiter? 
@@ -66,11 +58,7 @@ The story.txt is read by using an ifstream object that reads each line and divid
 ---
 
 ## **6. Debugging Process (Errors & Fixes)**
-(Describe one or more debugging challenges you faced and how you fixed them.)
 When I was testing my program it kept crashing and showing a SIGSEG error. I realized it was trying to access memory that wasn't properly initialized, so I fixed it by adding an if(p.second) which ensured that the pointer stored is valid (not a nullptr).
-
-Example:
-> Initially, my program was crashing when trying to access an uninitialized node. I realized it was because I was not properly checking for `nullptr` before accessing child nodes, so I added a check to prevent accessing uninitialized memory.
 
 ---
 
@@ -114,6 +102,7 @@ Your trip has sadly come to an end and you have a safe flight home.
 The game has ended. Thanks for playing!
 
 Process finished with exit code 0
+
 ---
 
 ## **8. Big-O Analysis of Core Methods**
@@ -126,7 +115,6 @@ Process finished with exit code 0
 ---
 
 ## **9. Edge Cases & Testing**
-(Describe at least one edge case you tested and its outcome.)
 An edge case that I tested was when the player inputs an invalid input such as a letter or number other than 1 or 2, the game will prompt the user again until a valid input is provided.
 
 Example:
@@ -135,11 +123,7 @@ Example:
 ---
 
 ## **10. Justification of Additional Features (If Any)**
-(If you added extra features, describe them and explain why.)
 A feature I added to the game was to prompt "The game has ended. Thanks for playing!" when the player has reached a leaf node to clarify the game is officially over.
-
-Example:
-> I added a **save/load feature** so players can resume the game later. This was done by writing the current node’s event number to a file and reading it when restarting.
 
 ---
 

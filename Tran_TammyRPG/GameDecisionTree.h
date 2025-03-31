@@ -19,7 +19,7 @@ public:
 
     // TODO: Function to load story data from a text file and build the binary tree
     void loadStoryFromFile(const std::string& filename, char delimiter) {
-        ifstream file("/Users/tammytran/programming-assignment-2-ttran3300/story.txt");
+        ifstream file(filename);
         string description;
         string eventNumber;
         string leftEventNumber;
